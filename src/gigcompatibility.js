@@ -284,16 +284,15 @@
     return bowser
 });
 
-Modernizr.addTest('no-support', function() {
+Modernizr.addTest('support', function() {
 
-    var noSupport = false;
-    var v, ver = false;
+    var support = true;
 
     if (supportSystem) {
         if (supportSystem.browser) {
             for (var i in supportSystem.browser) {
                 if (bowser[i] && bowser.version <= supportSystem.browser[i]) {
-                    noSupport = true;
+                    support = false;
                 }
             }
         }
@@ -307,7 +306,7 @@ Modernizr.addTest('no-support', function() {
 
 
                     if (ver && ver <= supportSystem.system.ios) {
-                        noSupport = true;
+                        support = false;
                     }
                 }
 
@@ -318,10 +317,10 @@ Modernizr.addTest('no-support', function() {
                             var androidversion = parseFloat(ua.slice(ua.indexOf("Android") + 8));
 
                             if (supportSystem.system.android <= androidversion) {
-                                noSupport = true;
+                                support = false;
                             } else {
                                 if (!supportSystem.browser.android && !bowser.chrome) {
-                                    noSupport = true;
+                                    support = false;
                                 }
                             }
                         }
@@ -333,14 +332,13 @@ Modernizr.addTest('no-support', function() {
 
         }
 
-        return noSupport;
+        return support;
 
     } else {
-        return noSupport;
+        return support;
     }
 
 });
-
 
 
 
