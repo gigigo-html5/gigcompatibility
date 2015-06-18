@@ -1,0 +1,20 @@
+{
+    "name": "gigcompatibility",
+    "version": "0.0.1",
+    "homepage": "https://github.com/gigigo-html5/gigcompatibility",
+    "authors": [
+        "Pedro Peña <pedro.jose@gigigo.com>"
+    ],
+    "description": "Module to manage the compatibility of web",
+    "dependencies": {
+        "modernizr": ""
+    },
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}
