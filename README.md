@@ -1,29 +1,33 @@
-# gigsocial
-Angular Module for Social Share in Facebook or Twitter
+# gigcompatibility
+Module to manage the compatibility of web
 
 
 ## install
 
-`bower install gigsocial --save`
+`bower install gigcompatibility --save`
 
 ## example
 
 ```js
 
-var app = angular.module('app', ['gig-social'])
-
-.config(function(GigSocialProvider) {
-      // initial configuration
-      GigSocialProvider.setFacebookID('XXXXXXXXXXXXXXX');
-        
-})
+    <script>
+        var supportSystem = {
+            browser: {
+                chrome : 27,
+                msie : 8,
+                firefox: 30,
+                safari: 7,
+                opera: 8,
+                android: true
+            },
+            system: {
+                ios: 6,
+                android: 5
+            }
+        };
+    </script>
     
-});
 ```
+    
 
-Use the Social Directive
-
-```html
-
-<gig-social title="Title Example" link="http://www.gigigo.com"></gig-social>
-```
+    
