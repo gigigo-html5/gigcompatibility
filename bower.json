@@ -7,7 +7,7 @@
     ],
     "description": "Module to manage the compatibility of web",
     "dependencies": {
-        "modernizr": ""
+        "modernizr": "2.8.3"
     },
     "license": "MIT",
     "ignore": [
