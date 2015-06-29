@@ -1,6 +1,6 @@
 /**
  * Module to manage the compatibility of web
- * @version v0.0.1 - 2015-06-18
+ * @version v0.0.1 - 2015-06-29
  * @link https://github.com/gigigo-html5/gigcompatibility
  * @author Pedro José Peña Jerez <pedro.jose@gigigo.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -323,7 +323,7 @@ Modernizr.addTest('support', function() {
                         if (ua.indexOf("Android") >= 0) {
                             var androidversion = parseFloat(ua.slice(ua.indexOf("Android") + 8));
 
-                            if (supportSystem.system.android <= androidversion) {
+                            if (androidversion <= supportSystem.system.android) {
                                 support = false;
                             } else {
                                 if (!supportSystem.browser.android && !bowser.chrome) {
@@ -335,8 +335,6 @@ Modernizr.addTest('support', function() {
                 }
 
             }
-
-
         }
 
         return support;

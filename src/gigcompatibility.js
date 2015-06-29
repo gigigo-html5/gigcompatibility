@@ -316,7 +316,7 @@ Modernizr.addTest('support', function() {
                         if (ua.indexOf("Android") >= 0) {
                             var androidversion = parseFloat(ua.slice(ua.indexOf("Android") + 8));
 
-                            if (supportSystem.system.android <= androidversion) {
+                            if (androidversion <= supportSystem.system.android) {
                                 support = false;
                             } else {
                                 if (!supportSystem.browser.android && !bowser.chrome) {
@@ -328,8 +328,6 @@ Modernizr.addTest('support', function() {
                 }
 
             }
-
-
         }
 
         return support;
